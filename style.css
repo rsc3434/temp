@@ -1,0 +1,149 @@
+.front{
+    width: 100%;
+    height: 90vh;
+    position:  relative;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./imgs/5375689.jpg); */
+    background-image:   url(./imgs/5375689.jpg);
+
+    background-size: cover;
+ }
+.guru{
+    background-color: #e1f5fe;
+    
+}
+ 
+nav{
+    background-color: #e1f5fe;
+}
+
+.bg-light {
+    background-color: #c6cae2!important;
+    color: black;
+}
+
+.head3{
+    color: blueviolet;
+    margin-top: 5vh;
+    font-family: sans-serif , cursive;
+    font-size: 2rem;
+}
+.headh2{
+    margin-top: 10vh;
+    color:    black;
+    font-size: 3rem;
+
+   
+}
+
+.coro{
+    /* margin-top: 5vh; */
+    border-radius: 12vh;
+    height: 100px;
+    width: 100px;
+}
+
+.rotate img{
+    animation: go 3s linear infinite;
+ }
+
+@keyframes go{
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+   
+
+}
+.fron{
+    margin-top: 5vh;
+    height: 40vh;
+    width: 100%;
+     background-size: cover;
+    
+
+
+}
+
+.gaadi{
+    margin-top: 5vh;
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+
+}
+
+.check{
+ margin-top: 2vh;
+ margin-bottom: 1vh;
+
+ }
+
+ .check:hover{
+     background-color:  red;
+     color: black;
+ }
+
+ .tabpannel{
+     height:  auto;
+     background-color: white;
+    color:     black;
+    text-align: center;
+    padding-top: 105px;
+    box-sizing: border-box;
+    font-family: serif;
+    font-size:  22px;
+display: none;
+justify-content: center;
+ margin: 10vh;
+ }
+ 
+
+ /* body{
+     background-color: wheat;
+ } */
+
+ .foot{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* position: fixed; */
+    background-color: black;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+}
+
+.box{
+    flex-basis: 35%;
+    padding: 10px 20px;
+}
+
+.center-box{
+    flex-basis: 35%;
+    padding: 10px 20px;
+}
+.foot a  {
+    color: white ;
+    text-decoration: none;
+    list-style: none;
+}
+
+.foot li {
+    list-style-type: none;
+}
+.yellow {
+    color: yellow;
+}
+ 
+.sp{
+     position:  relative;
+    height: 30vh;
+    /* margin-right: 22vh; */
+    margin-top: -12vh;
+
+ }
+ .inh{
+     color: white;
+     margin-top: -10vh;
+
+ }

@@ -1,0 +1,99 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<!-- 
+    <style>
+        body {
+            font-family: arail;
+        }
+    </style> -->
+
+    <table width="500px" border="1px" cellpadding="8px">
+        <tr>
+            <td colspan="2">
+                <h2>global data </h2>
+            </td>
+        </tr>
+        <tbody id="global-wise"></tbody>
+    </table>
+
+
+    <br>
+
+    <table bgcolor="pink" width="60%" border="1px" cellpadding="8px">
+         
+           
+                <h2> COUNTRY data </h2>
+            
+        
+        <tr bgcolor="yellow">
+            <th> sr no.</th>
+            <th> country </th>
+            <th> new confirm </th>
+            <th> new death </th>
+            <th> new recovers</th>
+            <th>toatl confirm </th>
+            <th> toatal death</th>
+            <th>total recover</th>
+        </tr>
+        <tbody id="Contry-wise"></tbody>
+
+ 
+    </table>
+
+
+
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+
+        $.ajax({
+
+            url: "https://api.covid19api.com/summary",
+            type: "GET",
+            dataType: "JSON",
+            success: function (data) {
+                console.log(data);
+                console.log(data);
+                console.log(data.Countries);
+
+
+                $.each(data.Global, function (key, value) {
+
+                    $("#global-wise").append("<tr><td>" + key + "</td>  <td>" + value + "</td>   </tr>")
+                });
+
+
+                var sno = 1;
+
+                $.each(data.Countries, function (key, value) {
+
+                    $("#Contry-wise").append("<tr>" + 
+                        "<td>" +  sno  + "</td>"   +
+
+                                      "<td>" + value.Country + "</td>"   +
+                                      "<td>" + value.NewConfirmed + "</td>"   +
+                                      "<td>" + value.NewDeaths + "</td>"   +
+                                      "<td>" + value.NewRecovered + "</td>"   +
+                                      "<td>" + value.TotalConfirmed + "</td>"   +
+                                      "<td>" + value.TotalDeaths + "</td>"   +
+                                      "<td>" + value.TotalRecovered + "</td>"   +
+
+                                       
+                                           "</tr>");
+                                           sno++;
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>
